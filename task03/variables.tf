@@ -1,29 +1,29 @@
 variable "rg_name" {
-  description = "The name of the existing Resource Group"
   type        = string
+  description = "The name of the existing resource group"
 }
 
 variable "storageaccount_name" {
-  description = "The name of the Storage Account"
   type        = string
+  description = "The name of the storage account"
 }
 
 variable "vnet_name" {
-  description = "The name of the Virtual Network"
   type        = string
+  description = "The name of the virtual network"
 }
 
 variable "subnet1_name" {
-  description = "The name of the first Subnet"
   type        = string
+  description = "The name of the first subnet"
 }
 
 variable "subnet2_name" {
-  description = "The name of the second Subnet"
   type        = string
+  description = "The name of the second subnet"
 }
 
 variable "student_email" {
-  description = "The student email (for tagging)"
   type        = string
+  description = "The email of the student creating the resources"
 }

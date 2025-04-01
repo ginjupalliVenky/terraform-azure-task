@@ -1,4 +1,4 @@
-rg_name             = "cmtr-9b654ca3-mod3-rg"
+rg_name            = "cmtr-9b654ca3-mod3-rg"
 storageaccount_name = "cmtr9b654ca3sa1743508957"
 vnet_name           = "cmtr-9b654ca3-mod3-vnet"
 subnet1_name        = "frontend"
