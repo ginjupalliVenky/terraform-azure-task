@@ -12,8 +12,8 @@ resource "azurerm_storage_account" "sa" {
   name                     = var.storageaccount_name
   resource_group_name      = data.azurerm_resource_group.existing.name
   location                 = data.azurerm_resource_group.existing.location
-  account_tier              = "Standard"  # Use "Standard" instead of "Basic"
-  account_replication_type = "LRS"  # This is fine for standard accounts
+  account_tier             = "Standard" # Use "Standard" instead of "Basic"
+  account_replication_type = "LRS"      # This is fine for standard accounts
 
   tags = {
     Creator = var.student_email
