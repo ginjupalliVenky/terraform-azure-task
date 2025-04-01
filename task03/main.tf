@@ -2,9 +2,15 @@ provider "azurerm" {
   features {}
 }
 
-# Import the existing Resource Group
+# Define the existing Resource Group (using data)
 data "azurerm_resource_group" "existing" {
   name = var.rg_name
+}
+
+# (Optional) If you need to **create** a new resource group instead of importing, uncomment this block:
+resource "azurerm_resource_group" "rg" {
+  name     = var.rg_name
+  location = "East US"  # Update to your preferred location
 }
 
 # Storage Account Resource
@@ -12,7 +18,7 @@ resource "azurerm_storage_account" "sa" {
   name                     = var.storageaccount_name
   resource_group_name      = data.azurerm_resource_group.existing.name
   location                 = data.azurerm_resource_group.existing.location
-  account_tier             = "Standard"
+  account_tier              = "Standard"
   account_replication_type = "LRS"
 
   tags = {
